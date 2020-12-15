@@ -168,7 +168,9 @@ class App extends Component {
       }
       userChatData[targetIndex].unread++;
     }
-    userChatData[targetIndex].messages.push(messageData);
+
+    //(userChatData[targetIndex].messages.length > 4) 
+    userChatData[targetIndex].messages.pop(messageData);
     this.setState({ userChatData });
   }
 
